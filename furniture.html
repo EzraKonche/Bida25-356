@@ -1,0 +1,269 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Citrus Grove</title>
+    
+
+    <!--bootstrap-->
+    <link bootstrap rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"/>
+    <!--External CSS-->
+    <link rel="stylesheet" href="homestyle.css"/>
+    <link rel="stylesheet" href="products.css"/>
+    <link rel="stylesheet" href="furniture.css"/>
+    <script src="product-links.js" defer></script>
+    <script src="cart-badge.js" defer></script>
+</head>
+<body>
+    <!--bootstrap JS bundle-->
+     <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script> 
+    <div class="navbar navbar-expand-lg navbar-white"></div>
+    
+    <!--header-->
+    
+    <header class="site-header">      
+            <!--Citrus grove logo-->
+            
+             <div class="brand">
+                <a href="index.html">Citrus Grove</a>
+            </div>
+            
+            <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a class="nav-link" href="index.html">Home</a></li>
+                        <li><a class="nav-link" href="products.html">Products</a></li>
+                        <li><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li><a class="nav-link" href="about.html">About</a></li>
+                        <li><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+            </nav>
+            <a class="cart-button" href="cart.html" aria-label="View cart">
+              <span class="cart-icon">🛒</span>
+              <span class="cart-count" id="cartCount">0</span>
+            </a>
+    </header>
+
+    <main>
+        <section class="page-banner">
+            <h1>Furniture</h1>
+        </section>
+
+         <section class="product-categories">
+            <h2 class="categories-heading">categories</h2>
+            <div class="categories-buttons">
+                <a href="furniture.html" class="category-btn">Furniture</a>
+                <a href="bed-linen.html" class="category-btn">Bed Linen</a>
+                <a href="fabrics.html" class="category-btn">Fabrics</a>
+            </div>
+        </section>
+
+
+
+        <section class="chairs-section">
+            <h2 class="chairs-heading">Chairs</h2>
+            <div class="chairs-grid">
+                <!-- chairs products go here--->
+                <div class="product-card">
+                    <img src="images/furniture/opus chair.jpg" alt="opus chair">
+
+                    <div class="product-info">
+                            <p class="product-name">opus chair</p>
+                            <p class="product-price" >P1,299.99</p>
+                            <a class="product-btn" href="#">View Product</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/furniture/sherpa fleece leisure chair.jpg" alt="sherpa fleece leisure chair">
+
+                    <div class="product-info">
+                            <p class="product-name">Sherpa Fleece Leisure Chair</p>
+                            <p class="product-price" >P3,999.99</p>
+                            <a class="product-btn" href="#">View Product</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/furniture/marshmallow curved lounge chair.jpg" alt="Marshmallow Curved Lounge Chair">
+
+                    <div class="product-info">
+                            <p class="product-name">Marshmallow Curved Lounge Chair</p>
+                            <p class="product-price" >P11,000.00</p>
+                            <a class="product-btn" href="#">View Product</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/furniture/dark grey lounge chair.jpg" alt="Dark Grey Lounge Chair">
+
+                    <div class="product-info">
+                            <p class="product-name">Dark Grey Lounge Chair</p>
+                            <p class="product-price" >P9,699.99</p>
+                            <a class="product-btn" href="#">View Product</a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+            <div class="section-footer">
+                <a href="chairs.html" class="see-more-btn">See more chairs</a>
+            </div>
+        </section>
+
+        <section class="sofa-section">
+            <h2 class="sofa-heading">Sofas</h2>
+            <div class="sofa-grid">
+                <!--sofas products go here--->
+                <div class="product-card">
+                    <img src="images/furniture/timber olio green sofa.jpg" alt="Timber Olio Green Sofa">
+
+                    <div class="product-info">
+                            <p class="product-name">Timber Olio Green Sofa</p>
+                            <p class="product-price" >P12,299.99</p>
+                            <a class="product-btn" href="#">View Product</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/furniture/Waxley Chenille Slope Arm.jpg" alt="Waxley Chenille Slope Arm Sofa">
+
+                    <div class="product-info">
+                            <p class="product-name">Waxley Chenille Slope Arm Sofa</p>
+                            <p class="product-price" >P8,999.99</p>
+                            <a class="product-btn" href="#">View Product</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/furniture/sofa 1.jpg" alt="Modern brown renfrew sofa">
+
+                    <div class="product-info">
+                            <p class="product-name">Modern Brown Renfrew Sofa</p>
+                            <p class="product-price" >P14,695.00</p>
+                            <a class="product-btn" href="#">View Product</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/furniture/sofa4.jpg" alt="chaise lounge sofa">
+
+                    <div class="product-info">
+                            <p class="product-name">Chaise Lounge Sofa</p>
+                            <p class="product-price" >P19,695.00</p>
+                            <a class="product-btn" href="#">View Product</a>
+                    </div>
+                </div>               
+            </div>
+            <div class="section-footer">
+                <a href="sofas.html" class="see-more-btn">See more sofas</a>
+            </div>
+        </section>
+
+        <section class="tables-section">
+            <h2 class="tables-heading">Tables</h2>
+            <div class="tables-grid">
+                <!--tables products go here--->
+                <div class="product-card">
+                    <img src="images/furniture/Walnut Coffee Table.jpg" alt="Walnut Coffee Table">
+
+                    <div class="product-info">
+                            <p class="product-name">Walnut Coffee Table</p>
+                            <p class="product-price" >P2,999.99</p>
+                            <a class="product-btn" href="#">View Product</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/furniture/charcoal low coffee table.jpg" alt="Charcoal Low Coffee Table">
+
+                    <div class="product-info">
+                            <p class="product-name">Charcoal Low Coffee Table</p>
+                            <p class="product-price" >P4,999.99</p>
+                            <a class="product-btn" href="#">View Product</a>
+                    </div>
+                </div>
+
+
+                <div class="product-card">
+                    <img src="images/furniture/table 1.jpg" alt="Rustic solid wood slab coffee table">
+
+                    <div class="product-info">
+                            <p class="product-name">Rustic Solid Wood Slab Coffee Table</p>
+                            <p class="product-price" >P7,795.00</p>
+                            <a class="product-btn" href="#">View Product</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/furniture/table2.png" alt="rectangular acacia wood coffee table">
+
+                    <div class="product-info">
+                            <p class="product-name">Rectangular Acacia Wood Coffee Table</p>
+                            <p class="product-price" >P10,332.00</p>
+                            <a class="product-btn" href="#">View Product</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <a href="tables.html" class="see-more-btn">See more tables</a>
+            </div>
+        </section>
+
+        <section class="products-closing">
+            <h2 class="closing-title">Looking for more?</h2>
+            <p class="closing-text">
+                Browse our Furniture, Bed Linen, and Fabrics collections to find the perfect pieces for your home.
+            </p>
+            <a href="furniture.html" class="closing-btn">Explore Categories</a>
+        </section>
+    </main>
+    <footer class="site-footer">
+       
+        <!--footer container-->
+           
+        <div class="footer-container">    
+            <div class="footer-brand">
+                <h2 class="footer-title">Citrus Grove</h2>
+                <p class="footer-brand-txt"> 
+                    Elegant furniture, quality textiles, and stylish bedroom decor for modern homes.
+                </p>
+            </div>
+            
+            <div class="footer-links">
+                <h2 class="footer-title">Quick links</h2>
+                <ul class="footer-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+            </div>
+            
+            <div class="footer-contact">
+                <h2 class="footer-title">Contact</h2>
+                <p class="footer-contact-txt"> 
+                    Gaborone, Botswana<br>
+                    citrusgrove01@gmail.com<br>
+                    +267 76543210
+                </p>
+
+            </div>
+        </div>
+        <p class="copyright">
+            ©2026 Citrus Grove. All rights reserved.
+         </p>
+    </footer>
+</body>
+</html>
