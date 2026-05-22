@@ -5,8 +5,8 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif,;
-  background: #f8f5f0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #e9e6e3;
   color: #333;
   line-height: 1.4;
 
@@ -89,6 +89,17 @@ body {
 
 
 .curtains-heading{ 
+        background-color: #decbbc;
+        padding: 16px 8%;
+        text-align: center;
+        border-radius: 10px;
+        margin: 25px 0;
+        color: #7a5c3e;
+        font-size: 1.5rem;
+        font-weight: bold;
+}
+
+.fabrics-heading{
     background-color: #decbbc;
     padding: 16px 8%;
     text-align: center;
@@ -96,19 +107,23 @@ body {
     margin: 25px 0;
     color: #7a5c3e;
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: bold
+
 }
 
-.products-grid {
+.curtains-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     padding:60px 8%;
 }
 
-.Duvet-grid .products-grid {
+.fabrics-grid {
+    display: grid;
     grid-template-columns: repeat(2, 280px);
     justify-content: center;
+    gap: 30px;
+    padding:60px 8%;
 }
 
 .product-card {
@@ -118,7 +133,12 @@ body {
     background-color: #ffffff;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.16);
 }
 
 .product-card img {
@@ -191,4 +211,195 @@ body {
 
 .closing-btn:hover {
     background-color: #a98260;
+}
+
+@media (max-width: 1200px) {
+    .curtains-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 50px 5%;
+    }
+
+    .fabrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 50px 5%;
+    }
+
+    .page-banner {
+        padding: 14px 5%;
+    }
+
+    .product-categories {
+        padding: 22px 5%;
+    }
+}
+
+@media (max-width: 900px) {
+    .curtains-grid,
+    .fabrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 40px 5%;
+    }
+
+    .page-banner {
+        padding: 12px 5%;
+        margin: 15px 0;
+    }
+
+    .page-banner h1 {
+        font-size: 2.2rem;
+    }
+
+    .product-categories {
+        padding: 20px 5%;
+        margin: 15px 0;
+    }
+
+    .categories-heading {
+        font-size: 1.3rem;
+        margin-bottom: 18px;
+    }
+
+    .categories-buttons {
+        gap: 12px;
+    }
+
+    .category-btn {
+        min-width: 110px;
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+
+    .curtains-heading,
+    .fabrics-heading {
+        padding: 12px 5%;
+        font-size: 1.3rem;
+        margin: 15px 0;
+    }
+
+    .product-card {
+        max-width: 320px;
+        min-height: 420px;
+    }
+
+    .product-card img {
+        height: 250px;
+    }
+
+    .products-closing {
+        padding: 28px 16px;
+        margin: 25px auto 40px;
+    }
+
+    .closing-title {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .closing-btn {
+        padding: 8px 18px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 680px) {
+    .curtains-grid,
+    .fabrics-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 30px 4%;
+    }
+
+    .page-banner {
+        padding: 12px 4%;
+        margin: 12px 0;
+        border-radius: 8px;
+    }
+
+    .page-banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .product-categories {
+        padding: 18px 4%;
+        margin: 12px 0;
+        border-radius: 16px;
+    }
+
+    .categories-heading {
+        font-size: 1.2rem;
+        margin-bottom: 16px;
+    }
+
+    .categories-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .category-btn {
+        width: 100%;
+        min-width: unset;
+        padding: 10px 14px;
+        font-size: 0.85rem;
+    }
+
+    .curtains-heading,
+    .fabrics-heading {
+        padding: 10px 4%;
+        font-size: 1.2rem;
+        margin: 12px 0;
+        border-radius: 8px;
+    }
+
+    .product-card {
+        max-width: 100%;
+        min-height: 380px;
+    }
+
+    .product-card img {
+        height: 220px;
+    }
+
+    .product-info {
+        padding: 14px;
+    }
+
+    .product-name {
+        min-height: auto;
+        font-size: 0.95rem;
+        margin-bottom: 8px;
+    }
+
+    .product-price {
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+    }
+
+    .product-btn {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+
+    .products-closing {
+        padding: 20px 4%;
+        margin: 20px auto 30px;
+        border-radius: 14px;
+    }
+
+    .closing-title {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+
+    .closing-text {
+        font-size: 0.9rem;
+        margin: 0 auto 12px;
+    }
+
+    .closing-btn {
+        padding: 8px 14px;
+        font-size: 0.75rem;
+    }
 }

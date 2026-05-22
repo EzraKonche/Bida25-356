@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Citrus Grove</title>
     
 
@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="homestyle.css"/>
 
     <link rel="stylesheet" href="contact-style.css"/> 
+    <script src="cart-badge.js" defer></script>
 </head>
 <body>
     <!--bootstrap JS bundle-->
@@ -38,6 +39,10 @@
                         <li><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
             </nav>
+            <a class="cart-button" href="cart.html" aria-label="View cart">
+              <span class="cart-icon">🛒</span>
+              <span class="cart-count" id="cartCount">0</span>
+            </a>
     </header>
 
     <main>
@@ -86,7 +91,7 @@
 
                 <p> 
                     Email your questions, concerns, etc. to us using the form.
-                    We will respond on the next business day.
+                    We will respond in 2-4 business days.
                 </p>
             </div>
 

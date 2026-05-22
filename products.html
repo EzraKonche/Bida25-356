@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Citrus Grove</title>
     
 
@@ -11,6 +11,8 @@
     <!--External CSS-->
     <link rel="stylesheet" href="homestyle.css"/>
     <link rel="stylesheet" href="products.css"/>
+    <script src="product-links.js" defer></script>
+    <script src="cart-badge.js" defer></script>
 </head>
 <body>
     <!--bootstrap JS bundle-->
@@ -37,6 +39,10 @@
                         <li><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
             </nav>
+            <a class="cart-button" href="cart.html" aria-label="View cart">
+              <span class="cart-icon">🛒</span>
+              <span class="cart-count" id="cartCount">0</span>
+            </a>
     </header>
 
     <main>
@@ -61,21 +67,21 @@
                 <!--products go here--->
                 <!--product card 1-->
                 <div class="product-card">
-                        <img src="images/duvet-inners/white-inner.jpg" alt="White duvet inner">
+                        <img src="images/pillows/pillow set.jpg" alt="Cotton Pillow set">
                         
                         <div class="product-info">
-                            <p class="product-name">White duvet inner</p>
-                            <p class="product-price">P399.99</p>
+                            <p class="product-name">Cotton Pillow set</p>
+                            <p class="product-price">P329.99</p>
                             <a class="product-btn" href="products.html">View Product</a>
                         </div>
                 </div>
 
                 <!--product card 2-->
                 <div class="product-card">
-                        <img src="images/duvet-inners/white-inner.jpg" alt="White duvet inner">
+                        <img src="images/duvet-cover-sets/king duvet.jpg" alt="King duvet cover">
                         
                         <div class="product-info">
-                            <p class="product-name">White duvet inner</p>
+                            <p class="product-name">King duvet cover</p>
                             <p class="product-price">P399.99</p>
                             <a class="product-btn" href="products.html">View Product</a>
                         </div>
@@ -83,28 +89,69 @@
 
                 <!--product card 3-->
                 <div class="product-card">
-                    <img src="images/duvet-inners/white-inner.jpg" alt="White duvet inner">
+                    <img src="images/curtains/beige-curtain.png" alt="Beige curtain">
                         
                         <div class="product-info">
-                            <p class="product-name">White duvet inner</p>
-                            <p class="product-price">P399.99</p>
+                            <p class="product-name">Beige curtain</p>
+                            <p class="product-price">P959.99</p>
                             <a class="product-btn" href="products.html">View Product</a>
                         </div>
                 </div>
 
                 <!--product card 4-->
                 <div class="product-card">
-                        <img src="images/duvet-inners/white-inner.jpg" alt="White duvet inner">
+                        <img src="images/furniture/Walnut Coffee Table.jpg" alt="Walnut Coffee Table">
                         
                         <div class="product-info">
-                            <p class="product-name">White duvet inner</p>
-                            <p class="product-price">P399.99</p>
+                            <p class="product-name">Walnut Coffee Table</p>
+                            <p class="product-price">P2999.99</p>
                             <a class="product-btn" href="products.html">View Product</a>
                         </div>
                 </div>
             
             </div>
         
+        </section>
+
+        <section class="featured-chairs">
+            <h2 class="products-heading">Featured Chairs</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="images/furniture/opus chair.jpg" alt="Opus Chair">
+                    <div class="product-info">
+                        <p class="product-name">Opus Chair</p>
+                        <p class="product-price">P1,299.99</p>
+                        <a class="product-btn" href="products.html">View Product</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/furniture/sherpa fleece leisure chair.jpg" alt="Sherpa Fleece Leisure Chair">
+                    <div class="product-info">
+                        <p class="product-name">Sherpa Fleece Leisure Chair</p>
+                        <p class="product-price">P3,999.99</p>
+                        <a class="product-btn" href="products.html">View Product</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/furniture/marshmallow curved lounge chair.jpg" alt="Marshmallow Curved Lounge Chair">
+                    <div class="product-info">
+                        <p class="product-name">Marshmallow Curved Lounge Chair</p>
+                        <p class="product-price">P11,000.00</p>
+                        <a class="product-btn" href="products.html">View Product</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="images/furniture/dark grey lounge chair.jpg" alt="Dark Grey Lounge Chair">
+                    <div class="product-info">
+                        <p class="product-name">Dark Grey Lounge Chair</p>
+                        <p class="product-price">P9,699.99</p>
+                        <a class="product-btn" href="products.html">View Product</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section-footer">
+                <a href="chairs.html" class="see-more-btn">See more chairs</a>
+            </div>
         </section>
 
         <section class="new-arrivals"> 
@@ -114,22 +161,22 @@
                 <!--products go here--->
                 <!--product card 1-->
                 <div class="product-card">
-                        <img src="images/duvet-inners/white-inner.jpg" alt="White duvet inner">
+                        <img src="images/furniture/Timber Olio Green Sofa.jpg" alt="Timber Olio Green Sofa">
                         
                         <div class="product-info">
-                            <p class="product-name">White duvet inner</p>
-                            <p class="product-price">P399.99</p>
+                            <p class="product-name">Timber Olio Green Sofa</p>
+                            <p class="product-price">P12,299.99</p>
                             <a class="product-btn" href="products.html">View Product</a>
                         </div>
                 </div>
 
                 <!--product card 2-->
                 <div class="product-card">
-                        <img src="images/duvet-inners/white-inner.jpg" alt="White duvet inner">
+                        <img src="images/blankets/wool blanket.png" alt="Wool blanket">
                         
                         <div class="product-info">
-                            <p class="product-name">White duvet inner</p>
-                            <p class="product-price">P399.99</p>
+                            <p class="product-name">Wool blanket</p>
+                            <p class="product-price">P320.99</p>
                             <a class="product-btn" href="products.html">View Product</a>
                         </div>
                 </div>

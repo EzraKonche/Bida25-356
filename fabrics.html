@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Citrus Grove</title>
     
 
@@ -11,6 +11,8 @@
     <!--External CSS-->
     <link rel="stylesheet" href="homestyle.css"/>
     <link rel="stylesheet" href="fabrics.css"/>
+    <script src="product-links.js" defer></script>
+    <script src="cart-badge.js" defer></script>
 </head>
 <body>
     <!--bootstrap JS bundle-->
@@ -37,6 +39,10 @@
                         <li><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
             </nav>
+            <a class="cart-button" href="cart.html" aria-label="View cart">
+              <span class="cart-icon">🛒</span>
+              <span class="cart-count" id="cartCount">0</span>
+            </a>
     </header>
 
     <main>
@@ -60,75 +66,72 @@
             <div class="curtains-grid">
                 <!-- curtains products go here--->
                 <div class="product-card">
-                    <img src="#" alt="curtain">
+                    <img src="images/curtains/beige-curtain.png" alt="beige curtain">
 
                     <div class="product-info">
-                            <p class="product-name">product name</p>
-                            <p class="product-price" >Price</p>
+                            <p class="product-name">Beige| Blockout Curtain</p>
+                            <p class="product-price" >P799.99</p>
                             <a class="product-btn" href="#">View Product</a>
                     </div>
                 </div>
 
                 <div class="product-card">
-                    <img src="#" alt="curtain">
+                    <img src="images/curtains/black-curtain.jpg" alt="black curtain">
 
                     <div class="product-info">
-                            <p class="product-name">product name</p>
-                            <p class="product-price" >Price</p>
+                            <p class="product-name">Black| Blockout Curtain</p>
+                            <p class="product-price" >P899.99</p>
                             <a class="product-btn" href="#">View Product</a>
                     </div>
                 </div>
 
-            </div>
-        </section>
+            
+        
 
-        <section class="sofa-section">
-            <h2 class="sofa-heading">Sofas</h2>
-            <div class="sofa-grid">
+        
                 <!--sofas products go here--->
                 <div class="product-card">
-                    <img src="#" alt="sofa">
+                    <img src="images/curtains/grey.png" alt="grey curtain">
 
                     <div class="product-info">
-                            <p class="product-name">product name</p>
-                            <p class="product-price" >Price</p>
+                            <p class="product-name">Grey Curtain</p>
+                            <p class="product-price" >P699.99</p>
                             <a class="product-btn" href="#">View Product</a>
                     </div>
                 </div>
 
                 <div class="product-card">
-                    <img src="#" alt="sofa">
+                    <img src="images/curtains/Cortina blackout cinza em tecido ✨️.jpg" alt="Cortina Blackout">
 
                     <div class="product-info">
-                            <p class="product-name">product name</p>
-                            <p class="product-price" >Price</p>
+                            <p class="product-name">Cortina Blackout</p>
+                            <p class="product-price" >P999.99</p>
                             <a class="product-btn" href="#">View Product</a>
                     </div>
                 </div>
-
             </div>
+            
         </section>
 
-        <section class="tables-section">
-            <h2 class="tables-heading">Tables</h2>
-            <div class="tables-grid">
-                <!--tables products go here--->
+        <section class="fabrics-section">
+            <h2 class="fabrics-heading">Fabrics</h2>
+            <div class="fabrics-grid">
+                <!--fabrics products go here--->
                 <div class="product-card">
-                    <img src="#" alt="table">
+                    <img src="images/curtains/Nylon spandex tricot has 4 way stretch and great….jpg" alt="Nylon Spandex Tricot">
 
                     <div class="product-info">
-                            <p class="product-name">product name</p>
-                            <p class="product-price" >Price</p>
+                            <p class="product-name">Nylon Spandex Tricot</p>
+                            <p class="product-price" >P1,299.99</p>
                             <a class="product-btn" href="#">View Product</a>
                     </div>
                 </div>
 
                 <div class="product-card">
-                    <img src="#" alt="table">
-
+                    <img src="images/curtains/nylon black.png" alt="nylon black fabric">
                     <div class="product-info">
-                            <p class="product-name">product name</p>
-                            <p class="product-price" >Price</p>
+                            <p class="product-name">Nylon Black Fabric</p>
+                            <p class="product-price" >P899.99</p>
                             <a class="product-btn" href="#">View Product</a>
                     </div>
                 </div>
