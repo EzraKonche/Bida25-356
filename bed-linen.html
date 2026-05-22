@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Citrus Grove</title>
     
 
@@ -11,6 +11,9 @@
     <!--External CSS-->
     <link rel="stylesheet" href="homestyle.css"/>
     <link rel="stylesheet" href="products.css"/>
+    <link rel="stylesheet" href="bed-linen.css"/>
+    <script src="product-links.js" defer></script>
+    <script src="cart-badge.js" defer></script>
 </head>
 <body>
     <!--bootstrap JS bundle-->
@@ -37,6 +40,10 @@
                         <li><a class="nav-link" href="contact.html">Contact</a></li>
                     </ul>
             </nav>
+            <a class="cart-button" href="cart.html" aria-label="View cart">
+              <span class="cart-icon">🛒</span>
+              <span class="cart-count" id="cartCount">0</span>
+            </a>
     </header>
 
     <main>
@@ -61,21 +68,20 @@
             <div class="duvet-inners-grid">
                 <!-- duvet inners products go here--->
                 <div class="product-card">
-                    <img src="#" alt="duvet inner">
-
+                    <img src="images/duvet-inners/white-inner.jpg" alt="white duvet inner">
                     <div class="product-info">
-                            <p class="product-name">product name</p>
-                            <p class="product-price" >Price</p>
+                            <p class="product-name">White Duvet Inner</p>
+                            <p class="product-price" >P399.99</p>
                             <a class="product-btn" href="#">View Product</a>
                     </div>
                 </div>
 
                 <div class="product-card">
-                    <img src="#" alt="duvet inner">
+                    <img src="images/duvet-inners/quilt set.jpg" alt="quilt set">
 
                     <div class="product-info">
-                            <p class="product-name">product name</p>
-                            <p class="product-price" >Price</p>
+                            <p class="product-name">Quilt Set</p>
+                            <p class="product-price" >P599.99</p>
                             <a class="product-btn" href="#">View Product</a>
                     </div>
                 </div>
@@ -88,7 +94,17 @@
             <div class="pillow-grid">
                 <!--pillows products go here--->
                 <div class="product-card">
-                    <img src="#" alt="pillow">
+                    <img src="images/pillows/cotton-pillow.jpg" alt="white pillow">
+
+                    <div class="product-info">
+                            <p class="product-name">Cotton Pillow</p>
+                            <p class="product-price" >P599.99</p>
+                            <a class="product-btn" href="#">View Product</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/pillows/pillow set.jpg" alt="feather pillow">
 
                     <div class="product-info">
                             <p class="product-name">product name</p>
@@ -98,14 +114,30 @@
                 </div>
 
                 <div class="product-card">
-                    <img src="#" alt="pillow">
+                    <img src="images/pillows/honey gold silk.jpg" alt="Honey Gold Silk Pillow">
 
                     <div class="product-info">
-                            <p class="product-name">product name</p>
-                            <p class="product-price" >Price</p>
+                            <p class="product-name">Honey Gold Silk Pillow</p>
+                            <p class="product-price" >P799.95</p>
                             <a class="product-btn" href="#">View Product</a>
                     </div>
                 </div>
+
+                <div class="product-card">
+                    <img src="images/pillows/black-silk.jpg" alt="black silk pillow">
+
+                    <div class="product-info">
+                            <p class="product-name">Black Silk Pillow</p>
+                            <p class="product-price" >P699.95</p>
+                            <a class="product-btn" href="#">View Product</a>
+                    </div>
+                </div>
+
+
+
+
+
+
 
             </div>
         </section>
@@ -115,21 +147,41 @@
             <div class="sheets-grid">
                 <!--sheets products go here--->
                 <div class="product-card">
-                    <img src="#" alt="sheet">
+                    <img src="images/sheets/beige fitted sheets.jpg" alt="beige fitted sheets">
 
                     <div class="product-info">
-                            <p class="product-name">product name</p>
-                            <p class="product-price" >Price</p>
+                            <p class="product-name">Beige Fitted Sheets</p>
+                            <p class="product-price" >P420.99</p>
                             <a class="product-btn" href="#">View Product</a>
                     </div>
                 </div>
 
                 <div class="product-card">
-                    <img src="#" alt="sheet">
+                    <img src="images/sheets/grey fitted sheet.jpg" alt="grey fitted sheet">
 
                     <div class="product-info">
-                            <p class="product-name">product name</p>
-                            <p class="product-price" >Price</p>
+                            <p class="product-name">Grey Fitted Sheet</p>
+                            <p class="product-price" >P499.95</p>
+                            <a class="product-btn" href="#">View Product</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/sheets/light olive sheets set.jpg" alt="light olive sheets set">
+
+                    <div class="product-info">
+                            <p class="product-name">Light Olive Sheets Set</p>
+                            <p class="product-price" >P599.95</p>
+                            <a class="product-btn" href="#">View Product</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <img src="images/sheets/two way colored sheet.jpg" alt="two way colored sheet">
+
+                    <div class="product-info">  
+                            <p class="product-name">Two Way Colored Sheet</p>
+                            <p class="product-price" >P660.95</p>
                             <a class="product-btn" href="#">View Product</a>
                     </div>
                 </div>
