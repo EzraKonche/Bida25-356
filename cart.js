@@ -24,7 +24,11 @@ function buildCartItemMarkup(item) {
         <h3>${item.name}</h3>
         <p>${item.category}</p>
         <p>Unit price: ${item.price}</p>
-        <p>Quantity: ${item.quantity}</p>
+        <div class="quantity-controls">
+          <button class="btn btn-tertiary qty-decrease" type="button" aria-label="Decrease quantity">−</button>
+          <span class="quantity-value">${item.quantity}</span>
+          <button class="btn btn-tertiary qty-increase" type="button" aria-label="Increase quantity">+</button>
+        </div>
       </div>
       <div class="cart-item-controls">
         <p>${formatPrice(itemTotal)}</p>
@@ -69,6 +73,37 @@ function renderCart() {
       }
     });
   });
+
+  cartContainer.querySelectorAll('.qty-decrease').forEach(button => {
+    button.addEventListener('click', (event) => {
+      const slug = event.target.closest('.cart-item')?.dataset.slug;
+      if (slug) {
+        updateCartQuantity(slug, -1);
+      }
+    });
+  });
+
+  cartContainer.querySelectorAll('.qty-increase').forEach(button => {
+    button.addEventListener('click', (event) => {
+      const slug = event.target.closest('.cart-item')?.dataset.slug;
+      if (slug) {
+        updateCartQuantity(slug, 1);
+      }
+    });
+  });
+}
+
+function updateCartQuantity(slug, change) {
+  const updatedCart = getCartItems().map(item => {
+    if (item.slug !== slug) return item;
+    const quantity = Math.max(1, item.quantity + change);
+    return { ...item, quantity };
+  });
+  saveCartItems(updatedCart);
+  renderCart();
+  if (window.updateCartCount) {
+    window.updateCartCount();
+  }
 }
 
 function removeCartItem(slug) {

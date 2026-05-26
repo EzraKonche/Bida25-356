@@ -7,8 +7,9 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #e9e6e3;
-  color: #333;
+  color: #f1eeee;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
@@ -51,15 +52,15 @@ img {
     gap: 0.5rem;
     padding: 10px 16px;
     border-radius: 10px;
-    background: #fff;
-    border: 1px solid #dcd2c7;
-    color: #7a5c3e;
+    background: #7a5c3e;
+    border: 1px solid transparent;
+    color: #ffffff;
     font-weight: 700;
     transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .cart-button:hover {
-    background: #f5f2ec;
+    background: #966f45;
     transform: translateY(-1px);
 }
 
@@ -90,7 +91,51 @@ img {
     color: #b88b5a;
 }
 
+.nav-toggle-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 0.65rem;
+    border: none;
+    background: rgba(255,255,255,0.98);
+    border-radius: 14px;
+    cursor: pointer;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.16);
+}
+
+.nav-toggle span {
+    width: 24px;
+    height: 3px;
+    margin: 3px 0;
+    border-radius: 2px;
+    background: #7a5c3e;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle-checkbox:checked + .nav-toggle span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.nav-toggle-checkbox:checked + .nav-toggle span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle-checkbox:checked + .nav-toggle span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
 .hero {
+    position: relative;
     height:85vh;
     background-image: url("images/duvet-cover-sets/citrus-hero.webp");
     background-size: cover;
@@ -101,22 +146,34 @@ img {
     padding:0 8%;
 }
 
+.hero::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    z-index: 0;
+}
+
 .hero-content{
     max-width:500px;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-title {
     font-size: 3rem;
-    color: #545454;
+    color: #ffffff;
     margin-bottom: 20px;
     line-height: 1.2;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 
 }
 
 .hero-text{
-    color: #545454;
+    color: #f7f7f7;
     font-size: 1.1rem;
     margin-bottom:25px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.6);
 }
 
 .hero-btn{
@@ -148,7 +205,7 @@ img {
 
 .products-grid {
     display:grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap:25px;
 }
 
@@ -166,7 +223,9 @@ img {
 }
 
 .product-card img {
-    height: 230px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
 }
 
@@ -343,18 +402,64 @@ img {
 @media (max-width: 900px) {
     .site-header {
         padding: 14px 5%;
+        flex-wrap: wrap;
+        row-gap: 12px;
+        align-items: center;
     }
 
     .brand a {
         font-size: 1.8rem;
     }
 
+    .nav-toggle {
+        display: flex;
+        order: 2;
+    }
+
+    .main-nav {
+        width: 100%;
+        order: 4;
+    }
+
     .nav-list {
-        gap: 12px;
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        margin: 0;
+        padding: 12px 0;
+        background: #2f3a4a;
+        border-radius: 12px;
+        box-shadow: 0 14px 30px rgba(0,0,0,0.08);
+    }
+
+    .nav-list li {
+        width: 100%;
     }
 
     .nav-link {
+        display: block;
+        width: 100%;
+        padding: 14px 16px;
+        border-radius: 0;
+        background: transparent;
+        color: #f7f7f7;
         font-size: 0.95rem;
+        text-align: left;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    .nav-toggle-checkbox:checked + .nav-toggle + .main-nav .nav-list {
+        display: flex;
+    }
+
+    .cart-button {
+        order: 3;
+        margin-left: auto;
     }
 
     .hero {
@@ -380,12 +485,8 @@ img {
     }
 
     .products-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
         gap: 15px;
-    }
-
-    .product-card img {
-        height: 180px;
     }
 
     .footer-container {
