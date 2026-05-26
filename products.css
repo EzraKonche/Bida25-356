@@ -94,6 +94,18 @@ body {
     padding:60px 8%;
 }
 
+/* Category-specific grids used on category pages (bed-linen, fabrics, etc.) */
+.duvet-inners-grid,
+.pillow-grid,
+.sheets-grid,
+.curtains-grid,
+.fabrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 20px 8%;
+}
+
 .new-arrivals .products-grid {
     grid-template-columns: repeat(2, 280px);
     justify-content: center;
@@ -192,11 +204,7 @@ body {
         gap: 25px;
         padding: 50px 5%;
     }
-
-    .new-arrivals .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
+    
     .page-banner {
         padding: 14px 5%;
         margin: 20px 0;
@@ -262,6 +270,7 @@ body {
         min-height: 420px;
     }
 
+    
     .product-card img {
         height: 250px;
     }
@@ -382,5 +391,24 @@ body {
     .closing-btn {
         padding: 8px 14px;
         font-size: 0.75rem;
+    }
+
+    .section-footer {
+        text-align: center;
+        margin-top: 14px;
+    }
+
+    .see-more-btn {
+        display: inline-block;
+        background: #7a5c3e;
+        color: #fff;
+        padding: 10px 16px;
+        border-radius: 999px;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .see-more-btn:hover {
+        background: #a98260;
     }
 }
